@@ -1,1 +1,9 @@
-
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://localhost:3306/board?autoReconnect=true
+    username: root
+    password: 1234
