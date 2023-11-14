@@ -22,6 +22,11 @@
             color: #333;
         }
 
+        .align-right {
+            margin-top: 10px;
+            text-align: right;
+        }
+
         table {
             width: 80%;
             margin: 20px auto;

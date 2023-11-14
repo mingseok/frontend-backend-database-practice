@@ -1,26 +1,83 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>MOD</title></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Member</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            width: 50%;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
 <body>
-    <h1>MOD</h1>
-    <form action="./" method="post">
-        <label>email</label>
-        <input type="text" name="email" value="${data.email }">
 
-        <br>
+<h2>Update Member</h2>
 
-        <label>password</label>
-        <input type="text" name="password" value="${data.password }">
+<div class="container">
+    <form action="/update" method="post">
+        <input type="hidden" name="id" value="${member.getId()}">
 
-        <br>
+        <label for="loginId">ID 수정</label>
+        <input type="text" id="loginId" name="loginId" value="${member.getLoginId()}" required>
 
-        <input type="submit" value="수정">
-        <input type="hidden" name="id" value="${data.id }">
+        <label for="memberPwd">비밀번호 수정</label>
+        <input type="password" id="memberPwd" name="memberPwd" value="${member.getMemberPwd()}" required>
+
+        <label for="memberName">이름 수정</label>
+        <input type="text" id="memberName" name="memberName" value="${member.getMemberName()}" required>
+
+        <button type="submit">저장</button>
     </form>
-    <a href="../list">리스트</a></body>
+</div>
 
+</body>
 </html>

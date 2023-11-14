@@ -7,9 +7,6 @@ spring:
     url: jdbc:mysql://localhost:3306/board?autoReconnect=true
     username: root
     password: 1234
-  output:
-    ansi:
-      enabled: always
   hiddenmethod:
     filter:
       enabled: true
