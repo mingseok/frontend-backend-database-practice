@@ -8,9 +8,22 @@
         select * from members;
     </select>
 
+    <select id="getMember" resultType="com.example.frontendbackenddatabasepractice.domain.Member" parameterType="int">
+        select * from members where id = #{id};
+
+    </select>
+
     <insert id="joinMember" parameterType="com.example.frontendbackenddatabasepractice.dto.MemberDto">
         insert into members (login_id, member_pwd, member_name, join_date)
         VALUE (#{loginId}, #{memberPwd}, #{memberName}, #{joinDate});
     </insert>
+    
+    <update id="updateMember" parameterType="com.example.frontendbackenddatabasepractice.dto.MemberDto">
+        update members
+            set login_id = #{loginId}, member_pwd = #{memberPwd}, member_name = #{memberName}
+        where id = #{id}
+    </update>
+
+
 </mapper>
 

@@ -25,4 +25,14 @@ public class MemberService {
     public List<Member> memberList() {
         return memberMapper.memberList();
     }
+
+    @Transactional
+    public void updateMember(MemberDto memberDto) {
+        memberMapper.updateMember(memberDto);
+    }
+
+
+    public Member getMember(int id) {
+        return memberMapper.getMember(id);
+    }
 }

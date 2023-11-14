@@ -22,4 +22,5 @@
         <input type="hidden" name="id" value="${data.id }">
     </form>
     <a href="../list">리스트</a></body>
+
 </html>

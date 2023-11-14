@@ -13,4 +13,7 @@ public interface MemberMapper {
 
     void joinMember(MemberDto memberDto);
 
+    void updateMember(MemberDto memberDto);
+
+    Member getMember(int id);
 }

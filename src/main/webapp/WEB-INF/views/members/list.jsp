@@ -85,18 +85,19 @@
     <thead>
     <tr>
         <th>고유번호</th>
-        <th>사용자 Id</th>
-        <th>사용자 Pwd</th>
         <th>사용자 이름</th>
+        <th>사용자 가입시간</th>
     </tr>
     </thead>
     <tbody>
     <c:forEach var="data" items="${list}">
         <tr>
             <td>${data.id}</td>
-            <td>${data.loginId}</td>
-            <td>${data.memberPwd}</td>
-            <td>${data.memberName}</td>
+            <td>
+                <a href="<c:url value='/view/${data.id}'/>">${data.memberName}</a>
+
+            </td>
+            <td>${data.joinDate}</td>
         </tr>
     </c:forEach>
     </tbody>
