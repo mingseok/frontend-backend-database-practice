@@ -34,7 +34,6 @@ public class MemberController {
     @PostMapping("/sign-up")
     public String signUp(@ModelAttribute MemberDto memberDto) {
         log.info("memberDto ={}", memberDto);
-
         memberService.joinMember(memberDto);
         return "redirect:/list";
     }
@@ -43,18 +42,15 @@ public class MemberController {
     @GetMapping("/view/{id}")
     public String viewMember(Model model, @PathVariable int id) {
         log.info("id = {}", id);
-
         Member member = memberService.getMember(id);
         model.addAttribute("member", member);
         return "members/view";
     }
 
-
     // 사용자 수정
     @GetMapping("/update/{id}")
     public String updateMemberForm(Model model, @PathVariable int id) {
-        log.info("들어왔음 = {}", id);
-
+        log.info("id = {}", id);
         model.addAttribute("memberDto", new MemberDto());
         model.addAttribute("member", memberService.getMember(id));
         return "members/update";
@@ -67,4 +63,10 @@ public class MemberController {
         return "redirect:/list";
     }
 
+    // 사용자 삭제
+    @PostMapping("/delete/{id}")
+    public String deleteMember(@PathVariable int id) {
+        memberService.deleteMember(id);
+        return "redirect:/list";
+    }
 }

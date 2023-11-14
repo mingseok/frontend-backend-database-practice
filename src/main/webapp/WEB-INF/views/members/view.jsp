@@ -19,6 +19,7 @@
         h2 {
             text-align: center;
             color: #333;
+            margin-bottom: 20px;
         }
 
         .container {
@@ -37,7 +38,7 @@
         }
 
         input {
-            width: 100%;
+            width: calc(100% - 16px);
             padding: 8px;
             margin-bottom: 16px;
             box-sizing: border-box;
@@ -49,6 +50,33 @@
 
         input[type="password"] {
             letter-spacing: 2px;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        a, button {
+            display: inline-block;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        a {
+            background-color: #4CAF50; /* Green */
+        }
+
+        button {
+            background-color: #f44336; /* Red */
+            margin-right: 10px; /* 각 버튼 간격 조절 */
         }
     </style>
 </head>
@@ -77,7 +105,13 @@
 
 </div>
 
+<div class="buttons-container">
+    <a href="/list">메인으로</a>
     <a href="/update/${member.getId()}">수정하기</a>
+    <form action="/delete/${member.getId()}" method="post">
+        <button type="submit">삭제하기</button>
+    </form>
+</div>
 
 </body>
 </html>

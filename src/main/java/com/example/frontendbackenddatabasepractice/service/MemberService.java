@@ -31,8 +31,11 @@ public class MemberService {
         memberMapper.updateMember(memberDto);
     }
 
-
     public Member getMember(int id) {
         return memberMapper.getMember(id);
+    }
+
+    public void deleteMember(int id) {
+        memberMapper.deleteMember(id);
     }
 }

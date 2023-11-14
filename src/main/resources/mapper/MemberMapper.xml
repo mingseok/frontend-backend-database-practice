@@ -5,12 +5,14 @@
 
 <mapper namespace="com.example.frontendbackenddatabasepractice.mapper.MemberMapper">
     <select id="memberList" resultType="com.example.frontendbackenddatabasepractice.domain.Member">
-        select * from members;
+        select *
+        from members;
     </select>
 
     <select id="getMember" resultType="com.example.frontendbackenddatabasepractice.domain.Member" parameterType="int">
-        select * from members where id = #{id};
-
+        select *
+        from members
+        where id = #{id};
     </select>
 
     <insert id="joinMember" parameterType="com.example.frontendbackenddatabasepractice.dto.MemberDto">
@@ -24,6 +26,9 @@
         where id = #{id}
     </update>
 
-
+    <delete id="deleteMember" parameterType="int">
+        delete
+        from members
+        where id = #{id};
+    </delete>
 </mapper>
-
