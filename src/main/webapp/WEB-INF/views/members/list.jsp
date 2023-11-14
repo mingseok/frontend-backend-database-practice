@@ -10,10 +10,10 @@
         <table border="1">
             <thead>
                     <tr>
-                        <th>id</th>
-                        <th>email</th>
-                        <th>password</th>
-                        <th>-</th>
+                        <th>고유번호</th>
+                        <th>사용자 Id</th>
+                        <th>사용자 Pwd</th>
+                        <th>사용자 이름</th>
                     </tr>
             </thead>
             <tbody>

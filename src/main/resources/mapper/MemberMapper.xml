@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.frontendbackenddatabasepractice.mapper.MemberMapper">
+    <select id="memberList" parameterType="com.example.frontendbackenddatabasepractice.domain.Member">
+        select * from members;
+    </select>
+
+    <insert id="joinMember" parameterType="com.example.frontendbackenddatabasepractice.dto.MemberDto">
+        insert into members (login_id, member_pwd, member_name, join_date)
+        VALUE (#{loginId}, #{memberPwd}, #{memberName}, #{joinDate});
+    </insert>
+</mapper>
+
