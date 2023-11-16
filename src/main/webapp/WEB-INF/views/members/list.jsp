@@ -110,5 +110,7 @@
 <div class="align-right">
     <button onclick="location.href='./sign-up'">계정등록</button>
 </div>
+
+<a href="/">초기화면</a>
 </body>
 </html>

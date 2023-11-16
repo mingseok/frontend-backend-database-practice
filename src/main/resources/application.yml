@@ -10,6 +10,8 @@ spring:
   hiddenmethod:
     filter:
       enabled: true
+  profiles:
+    include: oauth
 
 
 mybatis:
@@ -17,3 +19,9 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true
   mapper-locations: classpath:mapper/**/*.xml
+
+
+logging:
+  level:
+    root: info
+    com.example.frontendbackenddatabasepractice: debug

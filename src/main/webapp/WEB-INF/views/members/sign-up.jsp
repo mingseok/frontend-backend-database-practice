@@ -19,14 +19,16 @@
 
         form {
             background-color: #fff;
-            padding: 20px;
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
         }
 
         h2 {
             text-align: center;
             color: #333;
+            margin-bottom: 20px;
         }
 
         label {
@@ -37,7 +39,7 @@
 
         input {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             margin-bottom: 15px;
             box-sizing: border-box;
             border: 1px solid #ccc;
@@ -47,22 +49,36 @@
         button {
             background-color: #4caf50;
             color: #fff;
-            padding: 10px 15px;
+            padding: 12px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            width: 100%;
         }
 
         button:hover {
             background-color: #45a049;
+        }
+
+        .home-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .home-link:hover {
+            color: #333;
         }
     </style>
 </head>
 
 <body>
 <form action="/sign-up" method="post">
-    <h2>회원가입</h2>
+    <h2>회원등록</h2>
 
     <label for="username">사용자 ID 입력</label>
     <input type="text" id="username" name="loginId" required>
@@ -75,5 +91,7 @@
 
     <button type="submit">가입하기</button>
 </form>
+
+<a href="/" class="home-link">초기화면</a>
 </body>
 </html>

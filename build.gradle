@@ -38,6 +38,12 @@ dependencies {
 
     // mybatis 연결
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+
+    // OAuth2
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
 }
 
 tasks.named('bootBuildImage') {

@@ -84,6 +84,8 @@
 
 <h2>상세화면</h2>
 
+
+
 <div class="container">
 
     <input type="hidden" name="id" value="${member.getId()}">
@@ -105,13 +107,18 @@
 
 </div>
 
+
+
 <div class="buttons-container">
+    <a href="/">초기화면</a>
     <a href="/list">메인으로</a>
     <a href="/update/${member.getId()}">수정하기</a>
     <form action="/delete/${member.getId()}" method="post">
         <button type="submit">삭제하기</button>
     </form>
 </div>
+
+
 
 </body>
 </html>

@@ -5,6 +5,15 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+
+
+src/main/resources/application-oauth.yml
+
+hs_err_pid1208.log
+hs_err_pid1348.log
+hs_err_pid15948.log
+
+
 ### STS ###
 .apt_generated
 .classpath
@@ -18,13 +27,14 @@ bin/
 !**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
-.idea
+#.idea
 *.iws
 *.iml
 *.ipr
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+
 
 ### NetBeans ###
 /nbproject/private/
