@@ -67,4 +67,9 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 
         return user;
     }
+
+    public String findByRole() {
+        // 테스트라서 5로 지정했다.
+        return userMapper.findByRole(5);
+    }
 }

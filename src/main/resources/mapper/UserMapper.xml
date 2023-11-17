@@ -3,9 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
+<!--useGeneratedKeys="true" keyProperty="id">-->
 <mapper namespace="com.example.frontendbackenddatabasepractice.mapper.UserMapper">
-
-    <insert id="save"  useGeneratedKeys="true" keyProperty="id">
+    <insert id="save" parameterType="com.example.frontendbackenddatabasepractice.domain.user.User">
         INSERT INTO user(name, email, role)
         VALUES(#{name}, #{email}, #{role})
     </insert>
@@ -16,5 +16,10 @@
         FROM user
         WHERE email = #{email}
     </select>
-</mapper>
 
+    <select id="findByRole" resultType="String" parameterType="int">
+        select role
+        from user
+        where id = #{id};
+    </select>
+</mapper>

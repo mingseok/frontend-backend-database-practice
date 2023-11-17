@@ -1,9 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>로그아웃 되었어요</title>
+    <title></title>
 </head>
 <body>
-<h1>로그아웃 되었어요</h1>
+<h1>user 등급이니 여기로 들어와진다.</h1>
+
 </body>
 </html>

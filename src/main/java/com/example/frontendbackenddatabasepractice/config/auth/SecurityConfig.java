@@ -34,7 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // "/api/v1/**" 주소를 가진 api는 user 권한을 가진 사람만 가능하도록 한다.
                 .antMatchers("/", "/sign-up", "/css/**", "/images/**", "/js/**", "/h2-console/**")
                 .permitAll()
-                .antMatchers("/api/v1/**", "/view").hasRole(Role.GUEST.name())
+                .antMatchers("/api/v1/**", "/test").hasRole(Role.GUEST.name())
 
                 // 설정된 값들 이외 나머지 url들을 나타내는 곳이다.
                 // 여기서는 authenticated을 추가하여 나머지 url들은 모두 'user'권한인 사용자들에게만 허용하게 한다.
@@ -44,7 +44,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 // 로그아웃 기능에 대한 여러 설정의 진입점이다.
                 // 로그아웃 성공시 / 주소로 이동한다.
-                .logout().logoutSuccessUrl("/logout")
+                .logout().logoutSuccessUrl("/")
 
                 .and()
 

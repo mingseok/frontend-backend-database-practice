@@ -6,8 +6,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+
 //@Mapper 가능한지 테스트 해보기
+@Repository
 public interface MemberMapper {
 
     List<Member> memberList();
