@@ -1,0 +1,28 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://localhost:3306/board?autoReconnect=true
+    username: root
+    password: 1234
+  hiddenmethod:
+    filter:
+      enabled: true
+  profiles:
+    include: oauth
+
+logging:
+  level:
+    root: info
+    com.example.frontendbackenddatabasepractice: debug
+
+
+
+mybatis:
+  type-aliases-package: com.example.frontendbackenddatabasepractice.domain
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/**/*.xml
+
