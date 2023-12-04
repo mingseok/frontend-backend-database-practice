@@ -7,9 +7,10 @@ build/
 
 
 
+application-test.yml
 
 
-src/main/resources/application-oauth.yml
+application-oauth.yml
 
 
 
