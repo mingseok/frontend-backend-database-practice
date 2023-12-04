@@ -6,10 +6,9 @@ build/
 !**/src/test/**/build/
 
 
-
+application-test2.yml
 
 application-test.yml
-
 
 application-oauth.yml
 
