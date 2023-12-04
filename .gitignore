@@ -7,7 +7,10 @@ build/
 
 
 
+src/main/resources/application-test.yml
 src/main/resources/application-oauth.yml
+
+
 
 hs_err_pid1208.log
 hs_err_pid1348.log
